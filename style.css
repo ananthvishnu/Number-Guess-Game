@@ -33,6 +33,7 @@ button {
 
 #subt,
 .newGame {
+    display: block;
     background-color: purple;
     color: #000;
     width: 350px;
@@ -40,8 +41,9 @@ button {
     border-radius: 25px;
     font-size: 30px;
     border-style: none;
-    margin: 40px;
     cursor: pointer;
+    text-align: center;
+    margin: 40px auto;
 }
 
 #guessField {

@@ -13,7 +13,7 @@ let numGuesses = 1;
 let playGame = true;
 
 if (playGame) {
-  subt.addEventListener("click", function (e) {
+  submit.addEventListener("click", function (e) {
     e.preventDefault();
     //Grab guess from user
     const guess = parseInt(userInput.value);
@@ -70,11 +70,11 @@ function displayMessage(message) {
 
 function endGame() {
   //Clear user input
+  submit.style.display = "none";
   userInput.value = "";
   //Disable user input button
   userInput.setAttribute("disabled", "");
   //Display Start new Game Button
-  //   p.classList.add("button");
   p.innerHTML = `Start New Game`;
   startOver.appendChild(p);
   playGame = false;
@@ -84,6 +84,7 @@ function endGame() {
 function newGame() {
   const newGameButton = document.querySelector(".newGame");
   newGameButton.addEventListener("click", function () {
+    submit.style.display = "block";
     //Pick a new random number
     randomNumber = parseInt(Math.random() * 100 + 1);
     previousGuesses = [];
